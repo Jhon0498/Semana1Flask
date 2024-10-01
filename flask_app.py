@@ -10,10 +10,10 @@ def hello_world():
 def user(name):
     return '<h1>Hello, {}!</h1>'.format(name)
 
-@app.route('/contextrequisition')  # Corrigido de '\contextrequisition' para '/contextrequisition'
+@app.route('/contextrequisition') 
 def contexto():
-    user_agent = request.headers.get('User-Agent')  # Captura o User-Agent aqui também
-    return f'Your browser: {user_agent}</p>'  # Corrigido o retorno
+    user_agent = request.headers.get('User-Agent') 
+    return f'Your browser: {user_agent}</p>'  
 
 @app.errorhandler(400)
 def bad_request(error):
